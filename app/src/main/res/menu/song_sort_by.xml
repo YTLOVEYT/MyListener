@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_sort_by"
+        android:orderInCategory="50"
+        android:title="@string/sortby"
+        app:showAsAction="never"
+        >
+        <menu>
+            <item
+                android:id="@+id/menu_sort_by_az"
+                android:title="@string/a_z"
+                />
+            <item
+                android:id="@+id/menu_sort_by_za"
+                android:title="@string/z_a"
+                />
+            <item
+                android:id="@+id/menu_sort_by_time"
+                android:title="@string/addtime"
+                />
+            <item
+                android:id="@+id/menu_sort_by_artist"
+                android:title="@string/artist"
+                />
+            <item
+                android:id="@+id/menu_sort_by_album"
+                android:title="@string/album"
+                />
+            <item
+                android:id="@+id/menu_sort_by_duration"
+                android:title="@string/duration"
+                />
+
+        </menu>
+
+    </item>
+</menu>

@@ -1,0 +1,85 @@
+<resources>
+    <!--自定义属性-->
+    <!--cardView的自定义样式-->
+    <attr name="cardStyle" format="reference"/>
+    <!--popupMenu的样式-->
+    <attr name="ttItemPopupMenuStyle" format="reference"/>\
+    <attr name="ttPopupMenuStyle" format="reference"/>
+    <!--专辑默认底板颜色-->
+    <attr name="album_default_palette_color" format="reference"/>
+    <!--影集默认的背景图片-->
+    <attr name="default_album_drawable" format="reference"/>
+    <!--默认的歌手头像-->
+    <attr name="default_singer_drawable" format="reference"/>
+    <!--分割线的颜色-->
+    <attr name="divider_color" format="reference"/>
+    <!--被选中的item，的背景颜色-->
+    <attr name="selectableItemBackground" format="reference"/>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--一级亮色-->
+    <style name="ThemeLightOne" parent="ThemeLightTwo"/>
+
+    <!-- 二级亮色主题. -->
+    <style name="ThemeLightTwo" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="cardStyle">@style/CardViewStyle</item>
+        <item name="ate_key">light_theme</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryTextBlack</item>
+        <item name="android:textColorSecondary">@color/colorSubTextBlack</item>
+        <item name="album_default_palette_color">@color/album_default_palette_color_light</item>
+        <item name="default_album_drawable">@drawable/icon_album_default</item>
+        <item name="default_singer_drawable">@drawable/icon_singer_default</item>
+        <item name="ttPopupMenuStyle">@style/AppTheme.PopupOverlay</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- 夜晚主题. -->
+    <style name="AppThemeDark" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <!--cardViewDe 背景-->
+    <style name="CardViewStyle" parent="CardView">
+        <item name="cardBackgroundColor">@color/window_background</item>
+    </style>
+
+    <!--popupMenu的主题-->
+    <style name="AppTheme.PopupOverlay" parent="@style/ThemeOverlay.AppCompat.Light"/>
+
+    <!--activity的切换动画-->
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+    <!--list的Item样式 省略号显示在末尾-->
+    <style name="ListItemTitleStyle" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+    </style>
+    <!--list的二级item显示样式 省略号显示在末尾-->
+    <style name="ListItemSubTitleStyle" parent="@style/TextAppearance.AppCompat.Caption">
+        <item name="android:ellipsize">end</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:lineSpacingExtra">0.0px</item>
+    </style>
+
+</resources>
